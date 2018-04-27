@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">Examen</string>
+    <string name="hint_one">User</string>
+    <string name="hint_two">Password</string>
+    <string name="hint_three">Name</string>
+    <string name="hint_four">Email</string>
+    <string name="hint_five">Confirm Password</string>
+
+
+    <string name="name_button_one">Sign in</string>
+    <string name="name_button_two">register</string>
+    <string name="name_text_one">Sign up</string>
+
+
+    <string name="margin_login">10dp</string>
+    <string name="title_activity_menu">Menu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu_user">MenuUser</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondoregistro"
+    tools:context="com.upeu.msr.examen.Registro">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/logoregistro" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/hint_three"
+        android:textAlignment="center"
+        android:background="@color/color_edidText"
+        />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/hint_four"
+        android:textAlignment="center"
+        android:background="@color/color_edidText"
+        />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="textPassword"
+        android:hint="@string/hint_two"
+        android:textAlignment="center"
+        android:background="@color/color_edidText"
+        />
+
+    <EditText
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="textPassword"
+        android:background="@color/color_edidText"
+        android:hint="@string/hint_five"
+        android:textAlignment="center" />
+    <Button
+        android:id="@+id/resgister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_button_two"
+        android:layout_margin="10dp" />
+
+</LinearLayout>
