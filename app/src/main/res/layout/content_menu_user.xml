@@ -4,17 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondomenu"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.upeu.msr.examen.MenuUser"
     tools:showIn="@layout/app_bar_menu_user">
-
-
-    <Button
-        android:id="@+id/getOut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="regresar"
-        />
 
 </android.support.constraint.ConstraintLayout>
