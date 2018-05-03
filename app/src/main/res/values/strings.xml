@@ -7,6 +7,14 @@
     <string name="hint_four">Email</string>
     <string name="hint_five">Confirm Password</string>
 
+    <string name="text_nav">Examen Michael</string>
+    <string name="text_nav_two">Universidad Peruana Union</string>
+
+    <string name="text_menu_one">Lista De Eventos</string>
+    <string name="text_menu_two">Registrar Asistencia</string>
+    <string name="text_menu_three">Reporte Asistencia</string>
+    <string name="text_menu_four">Usuarios</string>
+    <string name="text_menu_five">Configuracion</string>
 
     <string name="name_button_one">Sign in</string>
     <string name="name_button_two">register</string>
