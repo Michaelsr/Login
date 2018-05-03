@@ -20,7 +20,8 @@
         <activity
             android:name=".MenuUser"
             android:label="@string/title_activity_menu_user"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Escaner"></activity>
     </application>
 
 </manifest>
