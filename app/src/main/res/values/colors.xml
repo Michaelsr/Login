@@ -7,5 +7,6 @@
     <color name="color_text">#0e0e0e</color>
     <color name="color_text_menu">#f2f1f1</color>
     <color name="color_nav">#3750f5</color>
+    <color name="color_user">#e0e1f4</color>
 
 </resources>

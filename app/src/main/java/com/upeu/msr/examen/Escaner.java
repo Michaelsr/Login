@@ -3,7 +3,6 @@ package com.upeu.msr.examen;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.zxing.Result;
@@ -12,7 +11,6 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class Escaner extends AppCompatActivity {
     EditText codigo;
-    Button escaner;
     private ZXingScannerView vistaescaner;
 
     @Override
