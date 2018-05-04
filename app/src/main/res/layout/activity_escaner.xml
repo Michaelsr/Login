@@ -15,8 +15,15 @@
     <Button
         android:id="@+id/escaner"
         android:layout_width="match_parent"
-        android:text="Guardar"
         android:layout_height="wrap_content"
+        android:onClick="Escaner"
+        android:text="@string/text_button_scanner_one" />
+
+    <Button
+        android:id="@+id/saveCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_scanner_two"
         />
 
 </LinearLayout>
