@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Button;
 
 /**
  * Created by Redes on 27/04/2018.
@@ -18,12 +19,14 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user(nombre text PRIMARY KEY, email text, password text)");
+        db.execSQL("Create table asistencia(nombre text)");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists user");
+        db.execSQL("drop table if exists asistencia");
     }
     //INSERTA EN LA BASE DE DATOS
     public boolean insert(String nombre, String email, String password){
@@ -40,6 +43,20 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         else {
             return true;
         }
+    }
+
+    //INSERTAR ASISTENCIA EN LA BASE DE DATOS
+    public boolean insertAsistencia(String nombre){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("nombre", nombre);
+        long in = db.insert("asistencia",null, contentValues);
+        if (in==-1){
+            return false;
+        }else{
+            return true;
+        }
+
     }
 
     //VALIDACION DE EMAIL
