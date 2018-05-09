@@ -31,25 +31,34 @@ public class Escaner extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String s1 = codigo.getText().toString();
-                if (s1.equals("")){
-                    Toast.makeText(getApplicationContext(),"los campos están vacios", Toast.LENGTH_LONG).show();
-
+                String newEntry = codigo.getText().toString();
+                if(codigo.length()!= 0){
+                    AddData(newEntry);
+                    codigo.setText("");
                 }else{
-                    Boolean insert = db.insertAsistencia(s1);
-                    if (insert==true){
-                        Toast.makeText(getApplicationContext(),"Insertado", Toast.LENGTH_LONG).show();
-                    }else{
-                        Toast.makeText(getApplicationContext(),"ERROR", Toast.LENGTH_LONG).show();
-                    }
+                    Toast.makeText(Escaner.this, "You must put something in the text field!", Toast.LENGTH_LONG).show();
                 }
 
+
             }
+
         });
 
 
 
     }
+
+    private void AddData(String newEntry) {
+        boolean insertData = db.addData(newEntry);
+
+        if(insertData==true){
+            Toast.makeText(this, "Data Successfully Inserted!", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this, "Something went wrong :(.", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
     public void Escaner(View view){
         vistaescaner = new ZXingScannerView(this);
         vistaescaner.setResultHandler(new zxingscanner());

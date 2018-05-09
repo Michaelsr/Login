@@ -92,9 +92,12 @@ public class MenuUser extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
+            Intent list = new Intent(MenuUser.this, Lista.class);
+            startActivity(list);
 
         } else if (id == R.id.nav_manage) {
-
+            Intent usu = new Intent(MenuUser.this, Usuario.class);
+            startActivity(usu);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

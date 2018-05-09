@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 /**
  * Created by Redes on 27/04/2018.
  */
@@ -46,18 +48,21 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     //INSERTAR ASISTENCIA EN LA BASE DE DATOS
-    public boolean insertAsistencia(String nombre){
+    public boolean addData(String nombre) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("nombre", nombre);
-        long in = db.insert("asistencia",null, contentValues);
-        if (in==-1){
+
+        long result = db.insert("asistencia", null, contentValues);
+
+        //if date as inserted incorrectly it will return -1
+        if (result == -1) {
             return false;
-        }else{
+        } else {
             return true;
         }
-
     }
+
 
     //VALIDACION DE EMAIL
 
@@ -82,5 +87,27 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             return false;
         }
     }
+
+
+
+
+
+
+
+//MOSTAR EN UN LISTVIEW AISTENCIA ESCANER
+
+    public Cursor getListContents(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor data = db.rawQuery("SELECT * FROM asistencia", null);
+        return data;
+    }
+
+    //MOSTAR EN UN LISTVIEW USUARIO
+    public Cursor ListContentS(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor data = db.rawQuery("SELECT * FROM user", null);
+        return data;
+    }
+
 
 }
